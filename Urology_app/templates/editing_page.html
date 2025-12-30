@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main_css_file %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/editing_page.css')}}">
+{% endblock %}
+
+{% block main_content %}
+    <div class="editing-page-container d-flex">
+        <input type="text" class="form-control form-control-lg" id="editing-input" value="{{stored_name}}">
+        <div class="editing-container w-full">
+
+        </div> 
+        <div class="btn-container d-flex w-full">
+            <button type="submit" class="submit-edit btn btn-success" onclick="submit_edit()">Update</button>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='js/editing_page.js')}}"></script>
+{% endblock %}

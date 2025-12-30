@@ -1,0 +1,8 @@
+<div class="editing-content-container">
+    {% for key,item in pt_data.items() %}
+        <div class="form-control w-full">
+            <div class="form-contol-label"> {{key}} </div>
+            <input type="text" class="editing-input {{key}}" value="{{item}}">
+        </div>
+    {% endfor %}
+</div>

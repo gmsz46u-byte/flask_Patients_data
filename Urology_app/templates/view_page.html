@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main_css_file %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/view_page.css')}}">
+{% endblock %}
+
+{% block main_content %}
+        <!-- Always present in html page -->
+        <div class="btn-group w-full" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+            <label for="btnradio1" class="btn btn-outline-primary">Search All</label>
+
+            <input type="radio" name="btnradio" id="btnradio2" autocomplete="off" class="btn-check">
+            <label for="btnradio2" class="btn btn-outline-primary">Search By Name</label>
+        </div>
+        <div class="main-content-container w-full">
+            <!-- To respond to check radiobtn1 using js ajax -->
+        </div>
+        <!-- Manual Backdrop normally hidden -->
+        <div class="manual-backdrop" id="manual-backdrop"></div>
+{% endblock %}
+
+{% block main_js_file %}
+    <script src="{{url_for('static',filename='js/view_page.js')}}"></script>
+{% endblock %}
